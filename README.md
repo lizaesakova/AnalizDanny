@@ -33,8 +33,7 @@ pip install -r requirements.txt
 
 по инструкции с сайта
 https://arturgolubev.ru/knowledge/course35/lesson223/
-я получила себе ключ для LLM Гигачат
-Сохранила его в файл key.env:
+я получила себе ключ для LLM Гигачат и сохранила его в файл key.env:
 GIGACHAT_API_KEY=
 
 ### Шаг 3: проверка файла input.csz
