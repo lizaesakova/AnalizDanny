@@ -27,7 +27,6 @@
 
 ### Шаг 1: Установка зависимостей
 
-```bash
 pip install -r requirements.txt
 
 ### Шаг 2: Настройка API ключа
