@@ -1,0 +1,205 @@
+{
+  "metadata": {
+    "total_items": 15,
+    "processed_items": 15,
+    "api_used": "GigaChat",
+    "input_file": "input.csv",
+    "output_file": "output.json"
+  },
+  "results": [
+    {
+      "id": 1,
+      "original_description": "\"Смартфон Apple iPhone 15 128 ГБ, синий. Цена: 89 990 ?. Бренд: Apple. Категория: Электроника / Смартфоны.\"",
+      "extracted_data": {
+        "product_name": "iPhone 15 128 ГБ синий",
+        "brand": "Apple",
+        "category": "Электроника / Смартфоны",
+        "price": 89990,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 2,
+      "original_description": "\"Беспроводные наушники Sony WH-1000XM5 с активным шумоподавлением. Стоимость 34 500 рублей. Относятся к категории Аудиотехника. Производитель: Sony.\"",
+      "extracted_data": {
+        "product_name": "Sony WH-1000XM5",
+        "brand": "Sony",
+        "category": "Аудиотехника",
+        "price": 34500,
+        "currency": "RUB",
+        "key_features": [
+          "беспроводные",
+          "активное шумоподавление"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "original_description": "\"Кроссовки мужские Nike Air Max 90, размер 42. Всего за 12 490 руб. Товар из раздела Обувь. Бренд: Nike.\"",
+      "extracted_data": {
+        "product_name": "Nike Air Max 90",
+        "brand": "Nike",
+        "category": "Обувь",
+        "price": 12490,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 4,
+      "original_description": "\"Стиральная машина-автомат Samsung WW80T554DAW, загрузка 8 кг. Цена 54 990 ?. Категория: Бытовая техника. Марка: Samsung.\"",
+      "extracted_data": {
+        "product_name": "стиральная машина-автомат Samsung WW80T554DAW",
+        "brand": "Samsung",
+        "category": "Бытовая техника",
+        "price": 54990,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 5,
+      "original_description": "\"Рюкзак для ноутбука Xiaomi Mi Business Backpack 15.6 дюймов. Всего 3 290 ?. Раздел: Аксессуары. Производитель: Xiaomi.\"",
+      "extracted_data": {
+        "product_name": "Xiaomi Mi Business Backpack 15.6 дюймов",
+        "brand": "Xiaomi",
+        "category": "Аксессуары",
+        "price": 3290,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 6,
+      "original_description": "\"Кофемашина автоматическая De'Longhi Magnifica S ECAM 22.110.B. Цена: 45 900 руб. Бренд: De'Longhi. Категория: Кухонная техника.\"",
+      "extracted_data": {
+        "product_name": "кофемашина автоматическая De'Longhi Magnifica S ECAM 22.110.B",
+        "brand": "De'Longhi",
+        "category": "кухонная техника",
+        "price": 45900,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 7,
+      "original_description": "\"Планшет Huawei MatePad SE 10.4, 64 ГБ, серый. Стоимость 18 750 ?. Категория: Планшеты. Производитель: Huawei.\"",
+      "extracted_data": {
+        "product_name": "Huawei MatePad SE 10.4",
+        "brand": "Huawei",
+        "category": "Планшеты",
+        "price": 18750,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 8,
+      "original_description": "\"Зимняя куртка женская Columbia Heavenly Long, размер M. Цена 15 800 рублей. Относится к категории Одежда / Верхняя одежда. Бренд: Columbia.\"",
+      "extracted_data": {
+        "product_name": "Зимняя куртка Columbia Heavenly Long",
+        "brand": "Columbia",
+        "category": "Одежда / Верхняя одежда",
+        "price": 15800,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 9,
+      "original_description": "\"Игровой монитор ASUS TUF Gaming VG27AQ, 27 дюймов, 165 Гц. Стоит 28 990 ?. Раздел: Компьютерная периферия. Марка: ASUS.\"",
+      "extracted_data": {
+        "product_name": "Игровой монитор ASUS TUF Gaming VG27AQ",
+        "brand": "ASUS",
+        "category": "Компьютерная периферия",
+        "price": 28990,
+        "currency": "RUB",
+        "key_features": [
+          "27 дюймов",
+          "165 Гц"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "original_description": "\"Набор посуды Tefal Character 5 предметов. Цена: 8 450 руб. Категория: Посуда. Производитель: Tefal.\"",
+      "extracted_data": {
+        "product_name": "набор посуды Tefal Character",
+        "brand": "Tefal",
+        "category": "посуда",
+        "price": 8450,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 11,
+      "original_description": "\"Электросамокат Ninebot KickScooter MAX G30P, запас хода 65 км. Стоимость 62 990 ?. Бренд: Ninebot. Категория: Электротранспорт.\"",
+      "extracted_data": {
+        "product_name": "Ninebot KickScooter MAX G30P",
+        "brand": "Ninebot",
+        "category": "Электротранспорт",
+        "price": 62990,
+        "currency": "RUB",
+        "key_features": [
+          "запас_хода_65_км"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "original_description": "\"Фен профессиональный Dyson Supersonic HD15. Цена 49 990 рублей. Раздел: Техника для красоты. Марка: Dyson.\"",
+      "extracted_data": {
+        "product_name": "Фен профессиональный Dyson Supersonic HD15",
+        "brand": "Dyson",
+        "category": "Техника для красоты",
+        "price": 49990,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 13,
+      "original_description": "\"Ноутбук Lenovo IdeaPad 3 15IAU7, Intel Core i5, 8 ГБ ОЗУ. Всего 52 490 ?. Категория: Компьютеры. Бренд: Lenovo.\"",
+      "extracted_data": {
+        "product_name": "Lenovo IdeaPad 3 15IAU7",
+        "brand": "Lenovo",
+        "category": "Компьютеры",
+        "price": 52490,
+        "currency": "RUB",
+        "key_features": [
+          "Intel Core i5",
+          "8 ГБ ОЗУ"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "original_description": "\"Умные часы Samsung Galaxy Watch6 40 мм, Bluetooth. Цена: 24 990 руб. Относятся к категории Носимая электроника. Производитель: Samsung.\"",
+      "extracted_data": {
+        "product_name": "Samsung Galaxy Watch6 40 мм",
+        "brand": "Samsung",
+        "category": "Носимая электроника",
+        "price": 24990,
+        "currency": "RUB",
+        "key_features": null
+      }
+    },
+    {
+      "id": 15,
+      "original_description": "\"Пылесос робот Xiaomi Robot Vacuum S10+, влажная и сухая уборка. Стоимость 29 990 ?. Бренд: Xiaomi. Раздел: Бытовая техника / Уборка.\"",
+      "extracted_data": {
+        "product_name": "Xiaomi Robot Vacuum S10+",
+        "brand": "Xiaomi",
+        "category": "Бытовая техника / Уборка",
+        "price": 29990,
+        "currency": "RUB",
+        "key_features": [
+          "влажная уборка",
+          "сухая уборка"
+        ]
+      }
+    }
+  ]
+}
