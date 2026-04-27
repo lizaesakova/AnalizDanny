@@ -11,17 +11,13 @@ import time
 # Загрузка переменных окружения
 load_dotenv(dotenv_path="key.env")
 
-# Настройка API (выберите один из вариантов)
-USE_GIGACHAT = True  # True - использовать GigaChat, False - использовать OpenAI
+# Настройка API
+USE_GIGACHAT = True 
 
 if USE_GIGACHAT:
     API_KEY = os.getenv("GIGACHAT_API_KEY")
     if not API_KEY:
         raise ValueError("❌ ОШИБКА: Не найден GIGACHAT_API_KEY в файле .env")
-else:
-    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-    if not OPENAI_API_KEY:
-        raise ValueError("❌ ОШИБКА: Не найден OPENAI_API_KEY в файле .env")
 
 INPUT_FILE = "input.csv"
 OUTPUT_FILE = "output.json"
@@ -120,72 +116,13 @@ def extract_product_info_gigachat(text):
         return None
 
 
-def extract_product_info_openai(text):
-    """Извлекает информацию о товаре через OpenAI API"""
-    url = "https://api.openai.com/v1/chat/completions"
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {OPENAI_API_KEY}"
-    }
-    
-    prompt = f"""
-    Extract product information from the following description in Russian.
-    Respond ONLY with a valid JSON object, no explanations or additional text.
-    
-    Response format:
-    {{
-        "product_name": "full product name",
-        "brand": "brand/manufacturer",
-        "category": "product category",
-        "price": numeric price value (without currency and spaces),
-        "currency": "currency (RUB, USD, EUR, etc.)",
-        "key_features": ["feature 1", "feature 2"]
-    }}
-    
-    If some information is missing, use null for that field.
-    
-    Product description: "{text}"
-    """
-
-    body = {
-        "model": "gpt-3.5-turbo",
-        "messages": [
-            {"role": "system", "content": "You are a product information extractor. Always respond with valid JSON."},
-            {"role": "user", "content": prompt}
-        ],
-        "temperature": 0.1,
-        "response_format": {"type": "json_object"}
-    }
-
-    response = requests.post(url, json=body, headers=headers)
-    
-    if response.status_code == 200:
-        result = response.json()['choices'][0]['message']['content']
-        try:
-            return json.loads(result.strip())
-        except json.JSONDecodeError as e:
-            print(f"Ошибка парсинга JSON: {e}")
-            return {
-                "product_name": text,
-                "brand": None,
-                "category": None,
-                "price": None,
-                "currency": None,
-                "key_features": [],
-                "parse_error": result
-            }
-    else:
-        print(f"Ошибка API: {response.status_code} - {response.text}")
-        return None
-
-
 def main():
     print("=" * 60)
-    print("📦 PIPELINE: Извлечение характеристик товаров")
+    print(" PIPELINE: Извлечение характеристик товаров")
     print("=" * 60)
     
     # Чтение входных данных
-    print(f"\n1️⃣  Чтение входных данных из {INPUT_FILE}...")
+    print(f"\n  Чтение входных данных из {INPUT_FILE}...")
     try:
         df = pd.read_csv(INPUT_FILE, encoding='utf-8')
         print(f"   ✅ Загружено {len(df)} записей")
@@ -206,12 +143,12 @@ def main():
     api_function = extract_product_info_gigachat if USE_GIGACHAT else extract_product_info_openai
     api_name = "GigaChat" if USE_GIGACHAT else "OpenAI"
     
-    print(f"\n2️⃣  Отправка данных в LLM ({api_name}) для извлечения характеристик...")
+    print(f"\n  Отправка данных в LLM ({api_name}) для извлечения характеристик...")
     print("-" * 60)
     
     for index, row in df.iterrows():
         description = row['description']
-        print(f"\n📝 Обработка товара #{index + 1}/{total}...")
+        print(f"\n Обработка товара #{index + 1}/{total}...")
         
         # Извлечение информации
         extracted_info = api_function(description)
