@@ -36,11 +36,11 @@ https://arturgolubev.ru/knowledge/course35/lesson223/
 я получила себе ключ для LLM Гигачат и сохранила его в файл key.env:
 GIGACHAT_API_KEY=
 
-### Шаг 3: проверка файла input.csz
+### Шаг 3: проверка файла input.csv
 
 Я проверила данные файла и пересохранила их в формате UTF-8
 
-### Шаг 4: проверка файла input.csz
+### Шаг 4: проверка файла input.csv
 
 запуск файла в командной строке через python main.py
 
